@@ -176,29 +176,21 @@
     </style>
 </head>
 <body>
-    <div class="upload-section">
-        <input type="file" id="photoInput" accept="image/*">
-        <label for="photoInput" class="upload-btn">Upload Photo</label>
-    </div>
-
     <div class="profile-header">
         <img id="profilePhoto" class="profile-photo" src="" alt="Profile Photo" style="display: none;">
         <div id="photoPlaceholder" class="photo-placeholder">
-            <p>Your portrait photo will appear here</p>
+            <img src="./profile.png>
         </div>
         
         <div class="profile-info">
-            <h1 class="name">Your Name</h1>
+            <h1 class="name">Melphin</h1>
             <p class="title">Software Developer and Blogger</p>
             <p class="description">
-                I'm a software developer with experience in web development and technology. 
+                I'm a software developer with experience in programming language design and cryptography. 
                 I enjoy building projects and sharing what I learn through writing and open source contributions.
             </p>
             <div class="links">
-                <a href="mailto:your.email@example.com" class="link">Email</a>
-                <a href="https://github.com/yourusername" class="link">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" class="link">LinkedIn</a>
-                <a href="https://twitter.com/yourusername" class="link">Twitter</a>
+                <a href="https://github.com/Melphination" class="link">GitHub</a>
             </div>
         </div>
     </div>
@@ -206,14 +198,12 @@
     <div class="section">
         <h2>Skills</h2>
         <div class="skills-list">
-            <span class="skill">JavaScript</span>
+            <span class="skill">Rust</span>
             <span class="skill">Python</span>
-            <span class="skill">React</span>
-            <span class="skill">Node.js</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">JavaScript</span>
             <span class="skill">HTML/CSS</span>
             <span class="skill">Git</span>
-            <span class="skill">PostgreSQL</span>
-            <span class="skill">Docker</span>
         </div>
     </div>
 
@@ -226,25 +216,5 @@
         <h2>Writing</h2>
         <p>Links to your blog posts, articles, or other writing can be featured here.</p>
     </div>
-
-    <script>
-        // Photo upload functionality
-        const photoInput = document.getElementById('photoInput');
-        const profilePhoto = document.getElementById('profilePhoto');
-        const photoPlaceholder = document.getElementById('photoPlaceholder');
-
-        photoInput.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    profilePhoto.src = e.target.result;
-                    profilePhoto.style.display = 'block';
-                    photoPlaceholder.style.display = 'none';
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
 </body>
 </html>
