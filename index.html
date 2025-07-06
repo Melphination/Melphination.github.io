@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 280px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-placeholder {
+            width: 200px;
+            height: 280px;
+            background: #f5f5f5;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+            padding-top: 20px;
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .title {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.2s ease;
+        }
+
+        .link:hover {
+            border-bottom: 1px solid #0066cc;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .upload-section {
+            margin-bottom: 20px;
+        }
+
+        .upload-btn {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+
+        .upload-btn:hover {
+            background: #0052a3;
+        }
+
+        #photoInput {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .profile-photo,
+            .photo-placeholder {
+                width: 180px;
+                height: 240px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            body {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-section">
+        <input type="file" id="photoInput" accept="image/*">
+        <label for="photoInput" class="upload-btn">Upload Photo</label>
+    </div>
+
+    <div class="profile-header">
+        <img id="profilePhoto" class="profile-photo" src="" alt="Profile Photo" style="display: none;">
+        <div id="photoPlaceholder" class="photo-placeholder">
+            <p>Your portrait photo will appear here</p>
+        </div>
+        
+        <div class="profile-info">
+            <h1 class="name">Your Name</h1>
+            <p class="title">Software Developer and Blogger</p>
+            <p class="description">
+                I'm a software developer with experience in web development and technology. 
+                I enjoy building projects and sharing what I learn through writing and open source contributions.
+            </p>
+            <div class="links">
+                <a href="mailto:your.email@example.com" class="link">Email</a>
+                <a href="https://github.com/yourusername" class="link">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" class="link">LinkedIn</a>
+                <a href="https://twitter.com/yourusername" class="link">Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Git</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Docker</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recent Projects</h2>
+        <p>Project descriptions and links will go here. You can add your portfolio items, GitHub repositories, or other work you'd like to showcase.</p>
+    </div>
+
+    <div class="section">
+        <h2>Writing</h2>
+        <p>Links to your blog posts, articles, or other writing can be featured here.</p>
+    </div>
+
+    <script>
+        // Photo upload functionality
+        const photoInput = document.getElementById('photoInput');
+        const profilePhoto = document.getElementById('profilePhoto');
+        const photoPlaceholder = document.getElementById('photoPlaceholder');
+
+        photoInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePhoto.src = e.target.result;
+                    profilePhoto.style.display = 'block';
+                    photoPlaceholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
